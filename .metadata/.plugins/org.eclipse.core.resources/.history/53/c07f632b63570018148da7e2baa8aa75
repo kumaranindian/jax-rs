@@ -1,0 +1,5 @@
+package com.jersey.tempconverter;
+
+public class TemperatureConverter {
+
+}

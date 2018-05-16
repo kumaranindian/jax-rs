@@ -1,0 +1,5 @@
+package com.jersey.matrixparam;
+
+public class MatrixparamTest {
+
+}

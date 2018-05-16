@@ -1,0 +1,29 @@
+package com.jersey.friends.controller;
+import java.util.List;
+
+public class FriendsController {
+	FriendsCollectionService fcs=new FriendsCollectionService();
+	//CRUD FOR FRIENDS
+	
+	
+	// get the list of all friends
+	public List getAllFriends(){
+	List allfrnds=	fcs.getAllFriends();
+	return allfnds;
+	}
+	
+	// get the name  of  friend by id
+		public void getFriendById(){
+			
+		}
+		// update the friend
+				public void updateFriend(){
+					
+				}
+				
+				// delete the friend
+				public void deleteFriend(){
+					
+				}
+
+}

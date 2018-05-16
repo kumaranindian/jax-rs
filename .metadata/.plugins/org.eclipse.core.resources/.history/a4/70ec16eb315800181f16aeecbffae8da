@@ -1,0 +1,21 @@
+package com.jersey.friends.service;
+import java.util.HashMap;
+
+import com.jersey.friends.pojo.Friend;
+public class FriendCollectionService {
+	
+	static HashMap<Integer,Friend> friendmap;
+
+	public FriendCollectionService(){
+		super();
+		Friend frnd=new Friend();
+		frnd.id=3;
+		frnd.name="karthi";
+		frnd.location="kkl";
+		Friend frnd1=new Friend();
+		frnd.id=4;
+		frnd.name="kathir";
+		frnd.location="chennai";
+	}
+}
+

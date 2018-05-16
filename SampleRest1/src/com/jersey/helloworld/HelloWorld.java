@@ -1,0 +1,33 @@
+package com.jersey.helloworld;
+
+
+import javax.ws.rs.Path;
+import javax.ws.rs.GET;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+@Path("/cts")
+public class HelloWorld {
+//	@GET
+//	@Path("/hello")
+// @Produces(MediaType.TEXT_HTML)
+//	public String sayHello(){		
+//		String msg="<h1> <center> Hello World!!! </center> </h1> This is my first rest service ";
+//	return  msg;
+		
+	//}
+	
+	@GET
+	@Path("/{urlvalue1}/{urlvalue2}")
+    @Produces(MediaType.TEXT_HTML)
+	public String sayHello_withparam(@PathParam("urlvalue1") String value1,@PathParam("urlvalue2") String value2){		
+		String msg="  Hello "+value1 +" you r from "+value2;
+		return  msg;
+		
+		
+		
+	}
+	
+
+}

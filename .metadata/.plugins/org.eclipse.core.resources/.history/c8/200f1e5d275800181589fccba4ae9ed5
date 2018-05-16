@@ -1,0 +1,38 @@
+package com.demo.restclient;
+
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
+import org.glassfish.jersey.client.ClientConfig;
+
+public class DemoRestClient {
+	
+	public static void main(String[] args){
+		ClientConfig config=new ClientConfig();
+		Client client=ClientBuilder.newClient(config);
+		WebTarget webtarget=client.target(getCustomURI());
+		String response=webtarget.path("rest").path("cts").path("karthi")
+				.path("karaikal")
+				.request().accept(MediaType.TEXT_PLAIN)
+				.get(Response.class)
+				.toString();
+		System.out.println(response);
+	String message=webtarget.path("rest")
+						.path("cts").
+						path("karthi")
+						.path("karaikal")
+						.request().accept(MediaType.TEXT_PLAIN)
+						.get(String.class)
+						.toString();
+	System.out.println(message);
+				
+	}
+	private static URI getCustomURI(){
+		return UriBuilder.fromUri("http://localhost:8080/SampleRest1/rest/cts/karthi/karaikal");
+		
+	}
+
+}

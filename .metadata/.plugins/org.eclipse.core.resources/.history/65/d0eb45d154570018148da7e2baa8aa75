@@ -1,0 +1,14 @@
+package com.jersey.helloworld;
+
+import javax.ws.rs.Path;
+import javax.ws.rs.GET;
+
+@Path("/cts")
+public class HelloWorld {
+	@GET
+	@Path("/Hello")
+	public String sayHello(){
+		return "Hello World!!! This is my first rest service";
+		
+	}
+}

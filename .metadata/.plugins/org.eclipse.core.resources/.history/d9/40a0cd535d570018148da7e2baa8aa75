@@ -1,0 +1,19 @@
+package com.jersey.helloworld;
+
+
+import javax.ws.rs.Path;
+import javax.ws.rs.GET;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+@Path("/cts")
+public class HelloWorld {
+	@GET
+	@Path("/hello")
+    @Produces(MediaType.TEXT_HTML)
+	public String sayHello(){		
+		String msg="<h1> Hello World!!! </h1> This is my first rest service ";
+		return  msg;
+		
+	}
+}

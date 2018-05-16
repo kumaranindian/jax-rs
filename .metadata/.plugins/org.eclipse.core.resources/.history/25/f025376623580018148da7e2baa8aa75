@@ -1,0 +1,15 @@
+package com.demo.restclient;
+
+public class DemoRestClient {
+	
+	public static void main(String[] args){
+		ClientConfig config=new ClientConfig();
+		Client client=ClientBuilder.newClient(config);
+		WebTarget webtarget=client.target(getCustomURI());
+	}
+	private static URI getCustomURI(){
+		return UriBuilder.fromUri("http://localhost:8080/SampleRest1/rest/cts/karthi/karaikal");
+		return null;
+	}
+
+}

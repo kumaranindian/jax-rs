@@ -1,0 +1,5 @@
+package com.demo.restclient;
+
+public class DemoRestClient {
+
+}

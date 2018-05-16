@@ -1,0 +1,5 @@
+package com.jersey.friends.service;
+
+public class FriendCollectionService {
+
+}

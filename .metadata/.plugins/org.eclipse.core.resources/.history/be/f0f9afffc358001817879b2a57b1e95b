@@ -1,0 +1,12 @@
+package com.jersey.matrixparam;
+
+public class MatrixparamTest {
+	
+	public Response getMassegeWithMultiParam(
+			  @PathParam("name") String name,
+			  @MatrixParam("class") String className, 
+			  @MatrixParam("rollNo") String rollNo){
+		
+	}
+
+}

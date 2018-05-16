@@ -1,0 +1,12 @@
+package com.jersey.helloworld;
+
+import javax.ws.rs.Path;
+import javax.ws.rs.GET;
+
+@Path("/cts")
+public class HelloWorld {
+	@GET
+	@Path("/Hello")
+	
+
+}
