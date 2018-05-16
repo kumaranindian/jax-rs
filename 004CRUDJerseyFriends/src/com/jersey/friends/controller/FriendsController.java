@@ -2,6 +2,8 @@ package com.jersey.friends.controller;
 
 import java.util.List;
 
+import javax.ws.rs.DELETE;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.GET;
 import javax.ws.rs.PathParam;
@@ -10,6 +12,7 @@ import javax.ws.rs.core.MediaType;
 
 import com.jersey.friends.pojo.Friend;
 import com.jersey.friends.service.FriendCollectionService;
+
 
 @Path("/friends")
 public class FriendsController {
@@ -45,13 +48,28 @@ public class FriendsController {
 	}
 
 	// update the friend
-	public void updateFriend() {
-
+	
+	@POST
+	@Path("/update")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List updateFriend(Friend frnd) {
+		System.out.println("hai 1");
+		Friend updatedfrnd=fcs.updateFrnd(frnd);	
+		System.out.println("hai 3");
+		List<Friend> updatedlist=fcs.getAllFriends();
+		return updatedlist;
 	}
 
 	// delete the friend
-	public void deleteFriend() {
+	
+	@DELETE
+	@Path("/delete/{id}")	
+	@Produces(MediaType.APPLICATION_JSON)
+	public List deleteFriend(@PathParam("id") int idToDelete) {
+			Friend remainingfrnd=	fcs.delFriendById(idToDelete);
+			List<Friend> remaininglist=fcs.getAllFriends();
+			return remaininglist;
 
-	}
+		}
 
 }

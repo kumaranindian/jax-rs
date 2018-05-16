@@ -1,0 +1,13 @@
+package com.jersey.friends.dao;
+
+import java.sql.Connection;
+
+public class FriendDAO {
+	
+	public FriendDAO(){
+		Connection conn=null;
+		
+		
+	}
+
+}

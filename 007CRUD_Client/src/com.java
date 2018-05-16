@@ -1,0 +1,1 @@
+javax.json.bind.JsonbException: Can't deserialize JSON array into: class com.jersey.friends.pojo.Friend

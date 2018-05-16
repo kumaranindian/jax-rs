@@ -1,0 +1,17 @@
+package com.jersey.friends.dao;
+
+import java.sql.Connection;
+
+import com.mysql.jdbc.PreparedStatement;
+
+public class FriendDAO {
+	
+	public FriendDAO(){
+		Connection conn=null;
+		Statement stat=null;
+		PreparedStatement ps=ull;
+		
+		
+	}
+
+}

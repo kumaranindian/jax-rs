@@ -4,10 +4,13 @@ import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.jersey.friends.dao.FriendDAO;
 import com.jersey.friends.pojo.Friend;
 
 public class FriendCollectionService {
 
+	
+	FriendDAO dao=new FriendDAO();
 	static HashMap<Integer, Friend> friendsmap = new HashMap<Integer, Friend>();
 
 	public FriendCollectionService() {
@@ -23,6 +26,8 @@ public class FriendCollectionService {
 
 	}
 
+	
+
 	public List getAllFriends() {
 		List friends = new ArrayList(friendsmap.values());
 		return friends;
@@ -33,5 +38,22 @@ public class FriendCollectionService {
 		Friend searchedfrnd=friendsmap.get(idToSearch);
 		return searchedfrnd;
 		
+	}
+
+	public Friend updateFrnd(Friend frnd) {
+		// TODO Auto-generated method stub
+		System.out.println("hai 2");
+		System.out.println("before update ==>"+frnd.getLocation());
+
+		Friend f= friendsmap.put(frnd.getId(), frnd);	
+		System.out.println("after update ==>"+frnd.getLocation());
+
+		return f;
+		}
+
+	public Friend delFriendById(int idToDelete) {
+		// TODO Auto-generated method stub
+		Friend f= friendsmap.remove(idToDelete);		
+		return f;
 	}
 }

@@ -1,0 +1,33 @@
+package com.jersey.friends.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.mysql.jdbc.PreparedStatement;
+
+public class FriendDAO {
+	Connection conn=null;
+	Statement stat=null;
+	PreparedStatement ps=null;
+	ResultSet rs=null;
+	
+	public FriendDAO(){
+	
+		
+		
+	}
+	public void connectToDatabase() throws ClassNotFoundException, SQLException {
+		Class.forName("com.mysql.jdbc.Driver");
+		conn=DriverManager.getConnection("jdbc:mysql:://localhost/frienddb","root","");
+		stat=conn.createStatement();
+	
+	}
+	public void delFrnd(int id) throws SQLException{
+		rs=stat.executeQuery("delete from frienddb.friend where id="+id);
+		
+	}
+
+}

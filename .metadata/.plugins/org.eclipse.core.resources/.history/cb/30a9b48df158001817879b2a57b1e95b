@@ -1,0 +1,5 @@
+package com.demo.CrudClient;
+
+public class Friend {
+
+}
